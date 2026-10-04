@@ -34,7 +34,9 @@ function paymentDate(month: string, day: number) {
         </p>
       </div>
     </div>
-    <p v-if="!overview.payments.length">取込済みの支払予定はありません。</p>
+    <p v-if="!overview.payments.length" class="panel-empty">
+      取込済みの支払予定はありません。
+    </p>
     <div
       v-for="payment in overview.payments"
       :key="`${payment.card_id}-${payment.payment_month}`"
