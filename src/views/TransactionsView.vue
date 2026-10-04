@@ -41,7 +41,7 @@ defineEmits<{
         </select></label
       ><button class="primary">検索</button>
     </form>
-    <p v-if="date">
+    <p v-if="date" class="active-filter">
       {{ date }} の明細
       <button @click="$emit('clearDate')">日付の絞り込みを解除</button>
     </p>
